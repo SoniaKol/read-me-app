@@ -1,7 +1,7 @@
 export function createReadingPageView() {
   return `<h2 class="reading-list-title page-title">Reading list</h2>
         <button type="button" id="update-list-btn" class="update-list-btn">
-          <svg class="reading-list-svg" width="25" height="25"><use href="/public/img/symbol-defs.svg#icon-spinner">
+          <svg class="reading-list-svg" width="25" height="25"><use href="./public/img/symbol-defs.svg#icon-spinner">
            </use></svg>
          </button>
         <ul class="reading-list" id="reading-list-id"></ul>`;
@@ -18,12 +18,12 @@ export function createReadingListItems(arr) {
       <p class="reading-list-text">${book.title} ${book.author}</p>
        <button type="button" class="remove-btn">
       <svg class="reading-list-svg" width="25" height="25">
-      <use href="/public/img/symbol-defs.svg#icon-bin"></use>
+      <use href="./public/img/symbol-defs.svg#icon-bin"></use>
       </svg>
         </button> 
         <button type="button" class="mark-as-read-btn">
         <svg class="reading-list-svg" width="25" height="25">
-        <use href="/public/img/symbol-defs.svg#icon-checkmark2"></use>
+        <use href="./public/img/symbol-defs.svg#icon-checkmark2"></use>
         </svg>
         </button>
       </li>`;
