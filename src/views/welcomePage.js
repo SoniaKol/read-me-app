@@ -1,7 +1,7 @@
 import { changeWelcomeImg } from "../utils/random.js";
 
 function createWelcomePageNew() {
-  return `<img src="/public/img/welcome-${changeWelcomeImg()}.png" alt="image with reading people" class="welcome-img"/>
+  return `<img src="./public/img/welcome-${changeWelcomeImg()}.png" alt="image with reading people" class="welcome-img"/>
       <h2 class="welcome-title">Start Your Adventure</h2>
       <p class="welcome-text"> Welcome to your new book space, where you can quickly find the books you need. Create your personal <span>reading list</span>: for study, leisure or self-development.
 
@@ -19,7 +19,7 @@ function createWelcomePageNew() {
 }
 
 function createWelcomeBackPage(name) {
-  return `<img src="/public/img/welcome-${changeWelcomeImg()}.png" alt="image with reading people" class="welcome-img" />
+  return `<img src="./public/img/welcome-${changeWelcomeImg()}.png" alt="image with reading people" class="welcome-img" />
       <h2 class="welcome-title">Welcome back, ${name}</h2>
       <p class="welcome-text">Create your personal <span>reading list</span>: for study, leisure or self-development.</p>
 
