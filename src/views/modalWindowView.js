@@ -100,14 +100,14 @@ export function initAdditionalData(book) {
   if (book.id_amazon) {
     extraData.insertAdjacentHTML(
       "beforeend",
-      `<a href="https://www.amazon.com/ID/s?k=${book.id_amazon[0]}" target="_blank"><img src="/public/img/amazon_logo.png" alt="amazon logo" class="modal-img-logo" /></a>`
+      `<a href="https://www.amazon.com/ID/s?k=${book.id_amazon[0]}" target="_blank"><img src="./public/img/amazon_logo.png" alt="amazon logo" class="modal-img-logo" /></a>`
     );
   }
 
   if (book.id_goodreads) {
     extraData.insertAdjacentHTML(
       "beforeend",
-      `<a href="https://www.goodreads.com/book/show/${book.id_goodreads[0]}" target="_blank"><img src="/public/img/goodreads_logo.png" alt="goodreads logo" class="modal-img-logo" /></a>`
+      `<a href="https://www.goodreads.com/book/show/${book.id_goodreads[0]}" target="_blank"><img src="./public/img/goodreads_logo.png" alt="goodreads logo" class="modal-img-logo" /></a>`
     );
   }
 }
