@@ -1,4 +1,3 @@
-import { createStartAppPage } from "../views/startAppView.js";
 import {
   createWelcomePageNew,
   createWelcomeBackPage,
@@ -12,13 +11,8 @@ import { initHomePage } from "./homePage.js";
 
 export function initWelcomePage() {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
-  // userInterface.innerHTML = "";
-  // const startAppPage = createStartAppPage();
-  // userInterface.insertAdjacentHTML("afterbegin", startAppPage);
-  const userName = JSON.parse(localStorage.getItem("userData")) || "";
-
-  // setTimeout(() => {
   userInterface.innerHTML = "";
+  const userName = JSON.parse(localStorage.getItem("userData")) || "";
 
   if (!userName.name) {
     const welcomePage = createWelcomePageNew();
@@ -37,5 +31,4 @@ export function initWelcomePage() {
   document.getElementById(GET_STARTED_BTN).addEventListener("click", () => {
     initHomePage();
   });
-  // }, 1500);
 }

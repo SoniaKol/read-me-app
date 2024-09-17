@@ -32,7 +32,7 @@ async function fetchBookByTitle(request, pageNo) {
     `${BASE_URL}/search.json?title=${request}&fields=${fields}&limit=6&page=${pageNo}`
   );
   if (response.status !== 200) {
-    throw new Error("error lol");
+    throw new Error(`Ooops! Something went wrong!`);
   }
   const data = await response.json();
   return data;
@@ -45,7 +45,7 @@ async function fetchAuthor(request) {
     `${BASE_URL}/search/authors.json?q=${request}&fields=${fields}&limit=5`
   );
   if (response.status !== 200) {
-    throw new Error("error lol");
+    throw new Error(`Ooops! Something went wrong!`);
   }
   const data = await response.json();
 
@@ -59,10 +59,9 @@ export async function fetchBookByAuthor(authorID) {
   );
 
   if (response.status !== 200) {
-    throw new Error("error lol");
+    throw new Error(`Ooops! Something went wrong!`);
   }
   const data = await response.json();
-  console.log(data);
 
   return data;
 }
@@ -75,9 +74,9 @@ export async function fetchBookByISBN(isbn) {
   );
 
   if (response.status !== 200) {
-    throw new Error("error lol");
+    throw new Error(`Ooops! Something went wrong!`);
   }
   const data = await response.json();
-  console.log(data);
+
   return data;
 }

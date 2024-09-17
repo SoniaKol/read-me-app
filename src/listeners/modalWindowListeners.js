@@ -9,7 +9,6 @@ export function addBtnModalHandler(evt) {
     author: evt.target.parentNode.children[2].innerHTML,
   };
   evt.target.classList.add("is-added");
-  console.log(evt.target);
   readingList.push(book);
   localStorage.setItem("readingList", JSON.stringify(readingList));
 }

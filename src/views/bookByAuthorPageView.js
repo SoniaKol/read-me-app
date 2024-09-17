@@ -27,7 +27,7 @@ export function createBookListByAuthor(data) {
         }
         return ` <li class="searching-result-item" data-isbn="${book.isbn[0]}">
         <img
-          src="https://covers.openlibrary.org/b/id/${book.cover_i}-S.jpg"
+          src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg"
           alt="${book.title} by ${book.author_name} book cover"
           class="searching-result-item-img"
           data-isbn="${book.isbn[0]}"

@@ -425,6 +425,14 @@ button {
   position: absolute;
   top: 5px;
   right: 5px;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  font-weight: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--gray-400);
   background-color: var(--gray-50);
   opacity: 0.5;
   border: 1px solid var(--gray-400);
@@ -585,6 +593,13 @@ button {
   position: absolute;
   top: 5px;
   right: 5px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 200;
   background-color: var(--gray-50);
   opacity: 0.5;
   border: 1px solid var(--gray-400);

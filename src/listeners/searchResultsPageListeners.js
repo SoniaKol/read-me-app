@@ -83,7 +83,6 @@ export function addButtonHandler(evt) {
     title: evt.target.parentNode.children[1].innerHTML,
     author: evt.target.parentNode.children[2].innerHTML,
   };
-  console.log(evt.target.parentNode);
   evt.target.parentNode.classList.add("is-added");
   readingList.push(book);
   localStorage.setItem("readingList", JSON.stringify(readingList));
