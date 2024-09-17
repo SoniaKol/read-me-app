@@ -3,8 +3,8 @@ import {
   createHomePageViewOneBook,
   createHomePageViewManyBooks,
 } from "../views/homePageView.js";
-import { USER_INTERFACE_ID } from "../constants.js";
-import { initBottomMenu } from "./bottomMenu.js";
+import { USER_INTERFACE_ID, HOME_BTN_ID } from "../constants.js";
+import { initBottomMenu, setActiveBtn } from "./bottomMenu.js";
 import { readingListLSCheck } from "../utils/localStorage.js";
 
 export function initHomePage() {
@@ -27,4 +27,5 @@ export function initHomePage() {
     userInterface.insertAdjacentHTML("afterbegin", homePage);
   }
   initBottomMenu();
+  setActiveBtn(HOME_BTN_ID);
 }

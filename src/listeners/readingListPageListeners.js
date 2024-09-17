@@ -22,6 +22,7 @@ export function markAsReadHandler(evt) {
   );
   localStorage.removeItem("readingList");
   localStorage.setItem("readingList", JSON.stringify(newReadingList));
+  evt.currentTarget.parentElement.classList.add("is-read");
 }
 
 export function putListeners() {

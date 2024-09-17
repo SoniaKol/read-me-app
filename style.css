@@ -25,6 +25,7 @@
   --others-orange: #ff8c39;
   --others-red: #ef5a56;
   --others-green: #34a853;
+  --others-light-green: #8ae49995;
   --font-family: "Roboto", sans-serif;
   --second-family: "Open Sans", sans-serif;
 }
@@ -389,7 +390,10 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
-
+.searching-results-list-book .searching-results-item.is-added,
+.searching-results-list-book .searching-results-item.is-added:hover {
+  background-color: var(--others-light-green);
+}
 .searching-results-list-book .searching-results-item:hover {
   background-color: var(--gray-100);
 }
@@ -543,7 +547,19 @@ button {
   padding: 10px;
   position: relative;
   width: calc((100% - 20px) / 2);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
+
+.authors-container-list .searching-result-item:hover {
+  background-color: var(--gray-200);
+}
+
+.authors-container-list .searching-result-item.is-added,
+.authors-container-list .searching-result-item.is-added:hover {
+  background-color: var(--others-light-green);
+}
+
 .authors-container-list .searching-result-item-img {
   height: 80px;
   margin: 0 auto;
@@ -649,6 +665,7 @@ button {
   color: var(--gray-900);
   padding-left: 10px;
   margin-bottom: 5px;
+  width: 100%;
 }
 .modal-subtitle {
   font-family: var(--second-family);
@@ -740,6 +757,10 @@ button {
 .modal-content .add-book:hover {
   background: var(--primary-600);
 }
+.modal-content .add-book.is-added,
+.modal-content .add-book.is-added:hover {
+  background: var(--others-light-green);
+}
 
 .update-list-btn {
   position: absolute;
@@ -764,7 +785,13 @@ button {
   gap: 16px;
   padding: 16px 60px;
   border-bottom: 1px solid var(--gray-200);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.reading-list-item.is-read {
+  background-color: var(--others-light-green);
+}
+
 .reading-list-img {
   width: 48px;
   height: 48px;
@@ -897,4 +924,381 @@ button {
   color: var(--gray-500);
   text-align: center;
   margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .welcome-img {
+    max-height: 350px;
+    margin: 0 auto;
+  }
+  .welcome-title {
+    font-size: 32px;
+  }
+  .welcome-text {
+    font-size: 24px;
+  }
+
+  .welcome-text span {
+    color: var(--primary-500);
+  }
+
+  .welcome-input::placeholder {
+    font-size: 18px;
+  }
+
+  .welcome-btn-minor,
+  .welcome-btn {
+    font-size: 20px;
+  }
+
+  .bottom-menu > button {
+    font-size: 18px;
+  }
+
+  .page-title {
+    font-size: 26px;
+  }
+
+  .home-text {
+    font-size: 24px;
+  }
+
+  .search-text {
+    font-size: 24px;
+  }
+
+  .search-input {
+    width: 380px;
+    height: 58px;
+  }
+
+  .search-input::placeholder {
+    font-size: 20px;
+  }
+
+  .search-checkbox-container {
+    gap: 15px;
+  }
+
+  .search-by {
+    font-size: 18px;
+  }
+  .search-checkbox-label {
+    font-size: 20px;
+    width: 102px;
+  }
+
+  .search-button {
+    width: 222px;
+    height: 58px;
+    font-size: 20px;
+  }
+
+  .searching-results-list-book {
+    gap: 20px;
+  }
+
+  .searching-results-list-book .searching-results-item {
+    width: calc((100% - 20px) / 2);
+    padding: 15px;
+  }
+
+  .searching-results-list-book .searching-result-item-img {
+    margin-bottom: 10px;
+  }
+  .searching-results-list-book .searching-result-item-title {
+    font-size: 18px;
+  }
+  .searching-results-list-book .searching-result-item-text {
+    font-size: 16px;
+  }
+  .searching-results-list-book .add-to-list-btn {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray-400);
+  }
+
+  .searching-results-list-author .searching-result-item-title {
+    font-size: 22px;
+  }
+  .searching-results-list-author .searching-result-item-text {
+    font-size: 18px;
+  }
+
+  .authors-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    margin: 0 auto;
+  }
+
+  .authors-container-text {
+    font-size: 18px;
+  }
+
+  .authors-container-list {
+    margin-top: 343px;
+    gap: 10px;
+  }
+
+  .authors-container-list .searching-result-item {
+    width: calc((100% - 20px) / 3);
+  }
+
+  .authors-container-list .searching-result-item-img {
+    height: 120px;
+  }
+  .authors-container-list .searching-result-item-title {
+    font-size: 16px;
+  }
+  .authors-container-list .search-list-btn {
+    font-weight: 100;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--grey-500);
+  }
+
+  .close-btn {
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .modal-content {
+    height: 100%;
+  }
+  .modal-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .modal-subtitle {
+    font-size: 18px;
+  }
+  .modal-img {
+    height: 400px;
+    margin-bottom: 20px;
+  }
+  .modal-extra-data {
+    margin-bottom: 20px;
+  }
+
+  .modal-extra-data p {
+    font-size: 18px;
+  }
+
+  .modal-extra-data .modal-extra-text {
+    font-size: 16px;
+  }
+
+  .modal-extra-subject-item {
+    font-size: 16px;
+  }
+
+  .modal-img-logo {
+    height: 50px;
+  }
+  .modal-content .add-book {
+    width: 280px;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .reading-list {
+    margin-top: 96px;
+  }
+
+  .reading-list-item {
+    padding: 26px 80px;
+  }
+
+  .reading-list-img {
+    width: 48px;
+    height: 68px;
+  }
+  .reading-list-text {
+    font-size: 18px;
+  }
+  .remove-btn {
+    right: 30px;
+  }
+
+  .error-message {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-color: var(--gray-50);
+  }
+  .user-interface {
+    width: 1028px;
+    max-height: 1000px;
+    background-color: var(--others-white);
+    border: 1px solid var(--gray-200);
+    box-shadow: 4px 6px 23px -7px rgba(69, 69, 69, 1);
+  }
+
+  .welcome-title {
+    font-size: 40px;
+  }
+
+  .welcome-text {
+    font-size: 32px;
+  }
+
+  .welcome-input,
+  .welcome-btn,
+  .welcome-btn-minor {
+    width: 400px;
+    height: 68px;
+  }
+
+  .welcome-input::placeholder {
+    font-size: 20px;
+  }
+
+  .welcome-btn-minor,
+  .welcome-btn {
+    font-size: 26px;
+  }
+
+  .bottom-menu {
+    width: 100%;
+  }
+
+  .page-title {
+    font-size: 32px;
+  }
+  .home-text {
+    font-size: 32px;
+  }
+
+  .search-text {
+    font-size: 32px;
+  }
+
+  .search-form {
+    gap: 30px;
+  }
+
+  .search-input {
+    width: 520px;
+    height: 68px;
+  }
+
+  .search-checkbox-container {
+    gap: 35px;
+  }
+
+  .search-by {
+    font-size: 22px;
+  }
+  .search-checkbox-label {
+    font-size: 28px;
+    width: 202px;
+  }
+
+  .search-button {
+    width: 322px;
+    height: 68px;
+    font-size: 28px;
+  }
+
+  .searching-results-list-book {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .searching-results-list-book .searching-results-item {
+    width: calc((100% - 20px) / 3);
+    height: calc((100% - 10px) / 2);
+  }
+
+  .searching-results-list-book .searching-result-item-img {
+    height: 220px;
+    width: 140px;
+  }
+
+  .searching-results-list-book .searching-result-item-title {
+    font-size: 22px;
+  }
+  .searching-results-list-book .searching-result-item-text {
+    font-size: 14px;
+  }
+
+  .authors-container {
+    width: 100%;
+    top: 108px;
+  }
+  .authors-container-text {
+    font-size: 22px;
+  }
+
+  .authors-container-text span {
+    color: var(--primary-500);
+  }
+
+  .authors-container-list {
+    margin-top: 370px;
+  }
+
+  .authors-container-list .searching-result-item {
+    width: calc((100% - 30px) / 4);
+  }
+
+  .authors-container-list .searching-result-item-img {
+    height: 180px;
+  }
+
+  .authors-container-list .searching-result-item-title {
+    font-size: 22px;
+  }
+
+  .modal-title {
+    font-size: 32px;
+  }
+  .modal-subtitle {
+    font-size: 22px;
+  }
+
+  .modal-extra-data p {
+    font-size: 22px;
+  }
+
+  .modal-extra-data .modal-extra-text {
+    font-size: 20px;
+  }
+
+  .modal-extra-subject-item {
+    font-size: 20px;
+  }
+
+  .reading-list {
+    margin-top: 104px;
+  }
+
+  .reading-list-img {
+    width: 68px;
+    height: 88px;
+  }
+  .reading-list-img {
+    width: 68px;
+    height: 88px;
+  }
+
+  .reading-list-text {
+    font-size: 24px;
+  }
 }

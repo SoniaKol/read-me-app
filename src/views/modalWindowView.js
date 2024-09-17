@@ -1,7 +1,7 @@
 export function createModalWindowView() {
   return `<div class="modal-window"> 
       <button type="button" class="close-btn">
-        <svg class="bottom-menu-svg" width="25" height="25"><use href="./public/img/symbol-defs.svg#icon-clear"></use></svg>
+        <svg class="modal-window-close-icon" width="25" height="25"><use href="./public/img/symbol-defs.svg#icon-clear"></use></svg>
      
     </button>
     <div class="modal-content"></div></div>`;

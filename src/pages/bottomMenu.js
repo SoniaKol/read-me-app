@@ -32,3 +32,8 @@ function addListeners() {
     initReadingListPage();
   });
 }
+
+export function setActiveBtn(btnId) {
+  const btn = document.getElementById(btnId);
+  btn.classList.add("is-active");
+}

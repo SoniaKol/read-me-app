@@ -1,5 +1,5 @@
 import { createSearchingResultsPage } from "../views/searchingResultsPageView.js";
-import { USER_INTERFACE_ID } from "../constants.js";
+import { USER_INTERFACE_ID, SEARCH_BTN_ID } from "../constants.js";
 import {
   loadMoreHandler,
   addButtonHandlerAuthorsPage,
@@ -8,7 +8,7 @@ import {
   createBookByAuthorPageView,
   createBookListByAuthor,
 } from "../views/bookByAuthorPageView.js";
-import { initBottomMenu } from "./bottomMenu.js";
+import { initBottomMenu, setActiveBtn } from "./bottomMenu.js";
 import { initModalWindow } from "./modalWindow.js";
 import { openBookCard } from "../listeners/searchResultsPageListeners.js";
 
@@ -25,6 +25,7 @@ export function initSearchingResultsPage() {
   loadMoreBtn.addEventListener("click", loadMoreHandler);
 
   initBottomMenu();
+  setActiveBtn(SEARCH_BTN_ID);
 }
 
 export function initBookByAuthorPage(books, authorID) {
@@ -48,4 +49,5 @@ export function initBookByAuthorPage(books, authorID) {
     btn.addEventListener("click", addButtonHandlerAuthorsPage)
   );
   initBottomMenu();
+  setActiveBtn(SEARCH_BTN_ID);
 }

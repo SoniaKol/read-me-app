@@ -1,7 +1,7 @@
 import { createSearchingPageView } from "../views/searchingPageView.js";
-import { USER_INTERFACE_ID } from "../constants.js";
+import { USER_INTERFACE_ID, SEARCH_BTN_ID } from "../constants.js";
 import { searchFormHandler } from "../listeners/searchPageListeners.js";
-import { initBottomMenu } from "./bottomMenu.js";
+import { initBottomMenu, setActiveBtn } from "./bottomMenu.js";
 
 export function initSearchingPage() {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -14,4 +14,5 @@ export function initSearchingPage() {
   form.addEventListener("submit", searchFormHandler);
 
   initBottomMenu();
+  setActiveBtn(SEARCH_BTN_ID);
 }

@@ -1,10 +1,10 @@
-import { USER_INTERFACE_ID } from "../constants.js";
+import { USER_INTERFACE_ID, READING_LIST_BTN_ID } from "../constants.js";
 import {
   createReadingPageView,
   createReadingListItems,
 } from "../views/readingListPageView.js";
 import { readingListLSCheck } from "../utils/localStorage.js";
-import { initBottomMenu } from "./bottomMenu.js";
+import { initBottomMenu, setActiveBtn } from "./bottomMenu.js";
 import {
   putListeners,
   readingListUpdate,
@@ -35,4 +35,5 @@ export function initReadingListPage() {
   updateBtn.addEventListener("click", readingListUpdate);
   putListeners();
   initBottomMenu();
+  setActiveBtn(READING_LIST_BTN_ID);
 }
