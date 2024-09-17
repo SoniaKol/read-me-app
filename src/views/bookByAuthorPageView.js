@@ -22,7 +22,7 @@ export function createBookListByAuthor(data) {
         />
         <h3 class="searching-result-item-title" data-isbn="${book.isbn[0]}">${book.title}</h3>
         <button type="button" class="search-list-btn add-to-list-btn">
-          +
+        <svg class="bottom-menu-svg" width="25" height="25"><use href="./public/img/symbol-defs.svg#icon-plus"></use></svg>
         </button></li>`;
         }
         return ` <li class="searching-result-item" data-isbn="${book.isbn[0]}">

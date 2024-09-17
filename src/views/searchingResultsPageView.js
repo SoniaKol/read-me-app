@@ -21,7 +21,7 @@ export function createBookList(arr) {
   <h3 class="searching-result-item-title" data-isbn="${book.isbn[0]}">${book.title}</h3>
   <p class="searching-result-item-text" data-isbn="${book.isbn[0]}">by ${book.author_name}</p>
         <button type="button"  class="add-to-list-btn">
-          +
+        <svg class="bottom-menu-svg" width="25" height="25"><use href="./public/img/symbol-defs.svg#icon-plus"></use></svg>
         </button></li>`;
         }
 
